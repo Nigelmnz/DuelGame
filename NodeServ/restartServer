@@ -1,0 +1,3 @@
+killall nodejs
+nodejs standardNodeServer.js
+exit

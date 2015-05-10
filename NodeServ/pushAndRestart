@@ -1,0 +1,9 @@
+if [[ $# -ne 1 ]]; then
+    echo "Needs commit message"
+    exit 1
+fi
+git add *
+git commit -m "$1"
+git push
+ssh -i ../../../duelgame.pem ubuntu@54.152.240.136 "cd Server; git pull; killall nodejs; ((nodejs standardNodeServer.js endQuickly > /dev/null) || (echo "Server Crashed on Startup, aborting" && false)) && (forever --minUptime=1000 start standardNodeServer.js && exit)"
+

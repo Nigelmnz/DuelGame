@@ -1,0 +1,39 @@
+Message Documentation:
+
+FORMAT:
+'message string' :: { key1:, key2: }
+
+client --> server:
+
+'join game' :: {loadOut: Number}
+'concede'   :: {}
+'reset' :: {}
+'make account' :: {name: String, email: String, [password: String]}
+'login' :: {sbID: String}
+'dump account data' :: {code: String}
+'game ready' :: {id: String}
+'action command' :: {[actionSpecificData], actionID: String}
+'attack start' :: {index: Number}
+'ping' :: {}
+'end action' :: {actionID : String}
+'submit action' :: {index: Number}
+
+server --> client
+
+'submit action' :: {index: Number, me: Bool}
+'action start'  :: {index: Number, time: Number, id: String, source: String}
+'all actions done' :: {}
+'action command' :: {actionID: String, me: Bool. [actionSpecificData]}
+[action stuff like damage]
+'join game' :: {id: String}
+'finding game' :: {}
+'reset' :: {}
+'userCount' :: {users: Number}
+'dump account data' :: [Account]
+'login' :: {sbID : String, name: String, success: Bool}
+'player data' :: {name: String, hats: [], rating: Number, health: Number, resources: [], attacks: [], me: Bool}
+'make account' :: {sbID: id}
+'ping' :: {ping: Number}
+'opponent disconnected' :: {}
+'priority' :: {priority: Boolean}
+'end action' :: {actionID: String, me: Bool}
