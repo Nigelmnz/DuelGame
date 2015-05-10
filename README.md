@@ -1,7 +1,7 @@
 DuelGame
 ===
 
-(c) 2015 Sam Donow <sad3@williams.edu>, Nigel Munoz <NigelMNZ.com>
+(c) 2015 Sam Donow <<sad3@williams.edu>>, Nigel Munoz <<a href="http://nigelmnz.com">nigelmnz.com</a>>
 
 DuelGame is the skeletal structure for a 2-player, turn-based, cross-platform, role-playing game.
 
